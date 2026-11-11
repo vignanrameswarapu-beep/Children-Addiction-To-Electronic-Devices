@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Children Addiction to Electronic Devices</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#eceae8;--card:#fff;--tx:#252423;--mut:#6b6967;--bd:#e1dfdd;--hd:#0f5f52;--sh:0 1px 3px rgba(0,0,0,.08)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161514;--card:#252423;--tx:#f3f2f1;--mut:#a19f9d;--bd:#3b3a39;--hd:#127a69;--sh:none}}
+:root[data-theme="dark"]{--bg:#161514;--card:#252423;--tx:#f3f2f1;--mut:#a19f9d;--bd:#3b3a39;--hd:#127a69;--sh:none}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",system-ui,Arial,sans-serif;padding:8px}
+.dash{max-width:1440px;margin:0 auto}
+header{background:var(--hd);color:#fff;padding:8px 14px;border-radius:6px;margin-bottom:8px;text-align:center}
+header h1{margin:0;font-size:20px;letter-spacing:.2px}header p{margin:2px 0 0;font-size:12px;opacity:.92}
+.note{font-size:11px;color:var(--mut);background:var(--card);border:1px solid var(--bd);border-left:4px solid #D9B300;padding:4px 10px;border-radius:6px;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:8px;margin-bottom:8px}
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c6{grid-column:span 6}.c8{grid-column:span 8}.c12{grid-column:span 12}
+@media(max-width:1100px){.c3,.c4{grid-column:span 6}.c6,.c8,.c12{grid-column:span 12}}
+@media(max-width:640px){.c3,.c4{grid-column:span 12}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:8px 10px;box-shadow:var(--sh);min-width:0}
+.card h2{font-size:13px;margin:0;font-weight:600}.sub{font-size:10px;color:var(--mut);margin:1px 0 4px}
+.kpi{text-align:center;padding:5px 8px}.kpi b{display:block;font-size:18px;color:var(--hd)}.kpi span{font-size:11px;color:var(--mut)}
+select{width:100%;padding:2px 4px;margin-bottom:4px;background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:4px;font-size:11px}
+.wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px}
+svg.ch{width:105px;height:105px;flex:none}svg path{cursor:pointer;transition:opacity .15s}svg path:hover{opacity:.75}
+svg.lc{width:100%;height:185px;display:block}#wf{height:205px}
+.lg{font-size:11px;line-height:1.5}.lg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px}
+.lgh{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:center;font-size:10px;margin-top:2px}
+.lgh i{display:inline-block;width:12px;height:3px;margin-right:5px;vertical-align:middle}
+.meta{font-size:10px;color:var(--mut);margin-top:3px}.tip{font-size:11px;text-align:center;min-height:13px;color:var(--mut)}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:11px}
+th,td{text-align:left;padding:2px 6px;border-bottom:1px solid var(--bd);vertical-align:top}th{color:var(--mut);font-weight:600}
+td.w{min-width:180px}
+.tag{display:inline-block;font-size:10px;padding:0 7px;border-radius:10px;color:#fff;white-space:nowrap}.t1{background:#D64550}.t2{background:#E66C37}.t3{background:#6B7280}
+</style></head><body><div class="dash">
+<header><h1>Children Addiction to Electronic Devices</h1><p>Children aged 1–6 · Mobile phones, tablets &amp; other screens · 7 countries</p></header>
+<div class="note">The studies measure screen time and frequency of use, not clinically diagnosed addiction. Age bands, years and methods differ by country, so countries are not ranked against each other.</div>
+
+<div class="grid">
+<div class="card kpi c3"><b>7</b><span>Countries covered</span></div>
+<div class="card kpi c3"><b>1 h/day</b><span>WHO limit for ages 2–4 (none at age 1)</span></div>
+<div class="card kpi c3"><b>2.8 h/day</b><span>Highest reported average (India, 24–60 months)</span></div>
+<div class="card kpi c3"><b>8</b><span>Health issue groups linked to screen use</span></div>
+</div>
+
+<div class="grid">
+<div class="card c4"><h2>Line chart 1: average daily screen time by age</h2><div class="sub">Hours/day · India, US, Canada, South Korea (Japan, England, Estonia report no hours; see chart 2)</div>
+<svg class="lc" id="lh" viewBox="0 0 420 240"></svg><div class="lgh" id="lgh"></div></div>
+<div class="card c4"><h2>Line chart 2: share of children by age</h2><div class="sub">Percent · all 7 countries; each line has its own measure</div>
+<svg class="lc" id="lp" viewBox="0 0 420 240"></svg><div class="lgh" id="lgp"></div></div>
+<div class="card c4"><h2>Waterfall chart: screen-time change with age</h2><div class="sub">Choose a country · change between age bands</div><select id="sw"></select>
+<svg class="lc" id="wf" viewBox="0 0 420 270"></svg>
+<div class="meta">Blue = level, orange = increase, green = decrease. India: PMC8259964 (2021); United States: OECD 2025; Canada: Madigan et al., JAMA Pediatrics 2019.</div></div>
+</div>
+
+<div class="grid">
+<div class="card c4"><h2>Pie chart: usage pattern by country</h2><div class="sub">Choose a country</div><select id="s1"></select>
+<div class="wrap"><svg class="ch" id="pie" viewBox="-1 -1 2 2"></svg><div class="lg" id="l1"></div></div><div class="tip" id="t1"></div><div class="meta" id="m1"></div></div>
+<div class="card c4"><h2>Donut chart: global guideline compliance</h2><div class="sub">Choose an age group</div><select id="s2"></select>
+<div class="wrap"><svg class="ch" id="don" viewBox="-1 -1 2 2"></svg><div class="lg" id="l2"></div></div><div class="tip" id="t2"></div><div class="meta" id="m2"></div></div>
+<div class="card c4"><h2>Countries covered</h2><div class="sub">One entry per country</div><div class="scroll"><table id="tb"><tr><th>Country</th><th>Age group</th><th>Measure</th><th>Year</th></tr></table></div></div>
+</div>
+
+<div class="grid">
+<div class="card c12"><h2>Children’s health issues linked to screen use (ages 0–7)</h2><div class="sub">Associations from observational studies, not proof of cause</div>
+<div class="scroll"><table><tr><th>Health issue</th><th>Evidence</th><th>What the research found</th><th>Source</th></tr>
+<tr><td>Overweight / obesity</td><td><span class="tag t1">Strong</span></td><td class="w">Excessive screen time associated with overweight/obesity in toddlers and preschoolers (meta-analysis).</td><td>Li et al., 2020</td></tr>
+<tr><td>Shorter sleep duration</td><td><span class="tag t1">Strong</span></td><td class="w">Excessive screen time associated with shorter sleep in toddlers and preschoolers (meta-analysis).</td><td>Li et al., 2020</td></tr>
+<tr><td>Poorer sleep quality</td><td><span class="tag t2">Moderate</span></td><td class="w">Japanese study of children under 5: more screen time went with shorter, poorer sleep.</td><td>Japan study 2019, cited 2025</td></tr>
+<tr><td>Developmental delay</td><td><span class="tag t2">Moderate</span></td><td class="w">Higher screen time at 24 and 36 months predicted lower developmental scores at 36 and 60 months (β −0.08, −0.06); no reverse effect.</td><td>Madigan et al., 2019</td></tr>
+<tr><td>Language delay</td><td><span class="tag t2">Moderate</span></td><td class="w">Reported association with excessive screen use in young children.</td><td>Li 2020; Italian Soc. Pediatrics 2026</td></tr>
+<tr><td>Myopia, eye strain</td><td><span class="tag t2">Moderate</span></td><td class="w">Pooled odds ratio 1.07 per extra hour/day in cohort studies; children and adolescents, not only ages 1–6.</td><td>Zong et al., 2024</td></tr>
+<tr><td>Unconsolidated sleep, injury</td><td><span class="tag t3">Limited</span></td><td class="w">Associations reported in individual studies of infants, toddlers and preschoolers.</td><td>Li et al., 2020</td></tr>
+<tr><td>Attention, executive function, emotions</td><td><span class="tag t3">Limited</span></td><td class="w">Review of 78 articles links high screen use to these problems; mostly broader pediatric ages.</td><td>Italian Soc. Pediatrics 2026</td></tr>
+</table></div>
+<div class="meta">No country-level prevalence of these health problems for ages 1–6 was found, so none is shown. Ask a pediatrician about an individual child.</div></div>
+</div>
+<div class="meta">Sources: PMC8259964, PubMed 31334169, NSCH 2024, OECD reports (2018–2025), WHO 2019, JAMA Pediatrics 2019 and 2022, IJERPH 2020, BMC Public Health 2024. “Derived” = 100% minus the reported share. Single data points are plotted at the middle of their reported age band.</div>
+</div>
+<script>
+const C=["#118DFF","#12239E","#E66C37","#6B007B","#E044A7"];
+const PIE={
+"India (rural Western India, ages 2–6)":{u:"%",m:"2019 · 379 preschool children; regional, not national",d:[["Did not meet recommendation",82.8],["Met recommendation (derived)",17.2]]},
+"United States (ages 0–5)":{u:"%",m:"2024 · NSCH, parent-reported weekday screen time, excludes schoolwork",d:[["Under 1 hour",36.0],["1 hour",21.8],["2 hours",24.9],["3 hours",9.7],["4+ hours",7.6]]},
+"Canada (under 5)":{u:"%",m:"2018 · only the 1–2 hour band is reported; the rest is derived",d:[["1–2 hours/day",29],["Other usage (derived)",71]]},
+"South Korea (ages 2–5)":{u:" h/day",m:"2017 · hours per day, smartphone-only, not a share of a whole",d:[["Weekdays",1.0],["Weekends",1.5]]},
+"Japan (kindergarten, 0–6)":{u:"%",m:"2021 · “around 70%”, remainder derived",d:[["Used the Internet",70],["Did not use (derived)",30]]},
+"England (5-year-olds)":{u:"%",m:"2018 · OECD study; monthly (9%) added to rarely/never (6%)",d:[["Every day",39],["Weekly, not daily",46],["Monthly or less",15]]},
+"Estonia (5-year-olds)":{u:"%",m:"2018 · OECD study; monthly (13%) added to rarely/never (9%)",d:[["Every day",39],["Weekly, not daily",39],["Monthly or less",22]]}};
+const DON={
+"Under 2 years (2022)":{u:"%",m:"Meta-analysis, 95 samples, 89,163 children",d:[["Met no-screen guideline",24.7],["Did not meet (derived)",75.3]]},
+"Ages 2–5 (2022)":{u:"%",m:"Meta-analysis, 95 samples, 89,163 children",d:[["Met ≤1 hour/day guideline",35.6],["Did not meet (derived)",64.4]]}};
+function arc(a0,a1,r0){const p=a=>[Math.cos(a),Math.sin(a)],big=a1-a0>Math.PI?1:0,A=p(a0),B=p(a1);
+if(!r0)return`M0 0L${A}A1 1 0 ${big} 1 ${B}Z`;
+return`M${A}A1 1 0 ${big} 1 ${B}L${B[0]*r0},${B[1]*r0}A${r0} ${r0} 0 ${big} 0 ${A[0]*r0},${A[1]*r0}Z`}
+function draw(o){const sel=document.getElementById(o.s),set=o.set;
+Object.keys(set).forEach(k=>sel.add(new Option(k)));
+function go(){const x=set[sel.value],svg=document.getElementById(o.svg),tot=x.d.reduce((s,d)=>s+d[1],0);let a=-Math.PI/2,h="",l="";
+x.d.forEach((d,i)=>{const t=d[1]/tot*2*Math.PI;
+h+=`<path d="${arc(a,a+t-0.0001,o.r)}" fill="${C[i]}" data-t="${d[0]}: ${d[1]}${x.u}"></path>`;
+l+=`<div><i style="background:${C[i]}"></i>${d[0]}: ${d[1]}${x.u}</div>`;a+=t});
+if(o.r)h+=`<text x="0" y="0.07" text-anchor="middle" font-size=".26" fill="currentColor" font-weight="600">${x.d[0][1]}${x.u}</text>`;
+svg.innerHTML=h;document.getElementById(o.l).innerHTML=l;document.getElementById(o.m).textContent=x.m;document.getElementById(o.t).textContent="";
+svg.querySelectorAll("path").forEach(p=>p.onmouseover=()=>document.getElementById(o.t).textContent=p.dataset.t)}
+sel.onchange=go;go()}
+draw({s:"s1",set:PIE,svg:"pie",l:"l1",m:"m1",t:"t1",r:0});
+draw({s:"s2",set:DON,svg:"don",l:"l2",m:"m2",t:"t2",r:.58});
+// generic line chart: x = child age in years (0-6)
+function line(id,lg,ymax,ystep,unit,S){const L=document.getElementById(id),X=a=>50+a*(350/6),Y=v=>200-v*(180/ymax);let h="",g="";
+for(let v=0;v<=ymax;v+=ystep)h+=`<line x1="50" x2="400" y1="${Y(v)}" y2="${Y(v)}" stroke="currentColor" opacity=".15"/><text x="42" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="currentColor">${v}</text>`;
+for(let a=0;a<=6;a++)h+=`<text x="${X(a)}" y="218" text-anchor="middle" font-size="11" fill="currentColor">${a}</text>`;
+h+=`<text x="225" y="235" text-anchor="middle" font-size="10" fill="currentColor" opacity=".7">Child age (years)</text>`;
+S.forEach(s=>{if(s.p.length>1)h+=`<polyline points="${s.p.map(q=>X(q[0])+","+Y(q[1]))}" fill="none" stroke="${s.c}" stroke-width="2.5"/>`;
+s.p.forEach(q=>{const dy=q[3]||-8;h+=`<circle cx="${X(q[0])}" cy="${Y(q[1])}" r="5" fill="${s.c}"><title>${s.n}: ${q[1]}${unit} (${q[2]})</title></circle><text x="${X(q[0])}" y="${Y(q[1])+dy}" text-anchor="middle" font-size="10" fill="${s.c}" font-weight="600">${q[1]}</text>`});
+g+=`<span><i style="background:${s.c}"></i>${s.n}</span>`});
+L.innerHTML=h;document.getElementById(lg).innerHTML=g}
+line("lh","lgh",4,1,"h/day",[
+{n:"India",c:"#118DFF",p:[[1.2,1.26,"6–23 months"],[3.5,2.8,"24–60 months"]]},
+{n:"United States",c:"#E66C37",p:[[1,1.05,"under 2 yrs",17],[3,2.13,"2–4 yrs"]]},
+{n:"Canada (weekly ÷ 7)",c:"#2BA84A",p:[[2,2.44,"24 months"],[3,3.57,"36 months"],[5,1.5,"60 months"]]},
+{n:"South Korea (smartphone, weekdays)",c:"#6B007B",p:[[3.5,1.0,"2–5 yrs"]]}]);
+line("lp","lgp",100,25,"%",[
+{n:"India: exceeded limit",c:"#118DFF",p:[[1.2,73.3,"6–23 months"],[3.5,73.0,"24–60 months"]]},
+{n:"Japan: used Internet",c:"#12239E",p:[[2.9,70,"ages 0–6",15]]},
+{n:"United States: 2+ h weekday",c:"#E66C37",p:[[2.5,42.2,"ages 0–5, derived"]]},
+{n:"Canada: 1–2 h/day",c:"#2BA84A",p:[[2.1,29,"under 5"]]},
+{n:"South Korea: +30% media time",c:"#6B007B",p:[[3.5,30,"ages 2–5, 2015–17 change"]]},
+{n:"England: daily use",c:"#D64550",p:[[4.85,39,"5-year-olds"]]},
+{n:"Estonia: daily use",c:"#D9B300",p:[[5.15,39,"5-year-olds",18]]}]);
+// waterfall with country selector
+const WF={
+"India":{u:"h/day",max:3,step:1,s:[["6–23 months",1.26,"t"],["Increase",1.54,"d"],["24–60 months",2.8,"t"]]},
+"United States":{u:"h/day",max:3,step:1,s:[["Under 2 yrs",1.05,"t"],["Increase",1.08,"d"],["2–4 yrs",2.13,"t"]]},
+"Canada":{u:"h/week",max:30,step:10,s:[["24 months",17.09,"t"],["24→36 mo",7.90,"d"],["36 months",24.99,"t"],["36→60 mo",-14.49,"d"],["60 months",10.5,"t"]]}};
+(function(){const sel=document.getElementById("sw"),W=document.getElementById("wf");Object.keys(WF).forEach(k=>sel.add(new Option(k)));
+function go(){const d=WF[sel.value],n=d.s.length,st=350/n,bw=st*.66,Y=v=>215-v*(170/d.max);let h=`<text x="225" y="14" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">${sel.value} (${d.u})</text>`,run=0,prev=null;
+for(let v=0;v<=d.max;v+=d.step)h+=`<line x1="50" x2="400" y1="${Y(v)}" y2="${Y(v)}" stroke="currentColor" opacity=".15"/><text x="42" y="${Y(v)+4}" text-anchor="end" font-size="11" fill="currentColor">${v}</text>`;
+d.s.forEach(([nm,v,t],i)=>{const x=50+i*st+(st-bw)/2;let top,bot,c,lab;
+if(t=="t"){top=v;bot=0;run=v;c="#118DFF";lab=v}else{const e=run+v;top=Math.max(run,e);bot=Math.min(run,e);run=e;c=v>0?"#E66C37":"#2BA84A";lab=(v>0?"+":"−")+Math.abs(v).toFixed(2)}
+if(prev!==null)h+=`<line x1="${x-(st-bw)}" x2="${x}" y1="${Y(prev)}" y2="${Y(prev)}" stroke="currentColor" opacity=".4" stroke-dasharray="3"/>`;
+h+=`<rect x="${x}" y="${Y(top)}" width="${bw}" height="${(top-bot)*170/d.max}" fill="${c}" rx="2"><title>${sel.value}, ${nm}: ${lab} ${d.u}</title></rect><text x="${x+bw/2}" y="${Y(top)-6}" text-anchor="middle" font-size="11" fill="currentColor" font-weight="600">${lab}</text><text x="${x+bw/2}" y="233" text-anchor="middle" font-size="10" fill="currentColor">${nm}</text>`;prev=run});
+h+=`<text x="225" y="258" text-anchor="middle" font-size="10" fill="currentColor" opacity=".7">Child age band</text>`;W.innerHTML=h}
+sel.onchange=go;go()})();
+const rows=[["India","6 months–6 years","Screen time vs. recommendation","2019–2021"],["United States","0–5 years","Weekday screen time","2024"],["Canada","Under 5 years","Digital-device use","2018"],["South Korea","2–5 years","Smartphone use","2017"],["Japan","0–6 years","Internet use","2021"],["England","5 years","Device use frequency","2018"],["Estonia","5 years","Device use frequency","2018"]];
+document.getElementById("tb").innerHTML+=rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("");
+</script></body></html>
